@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: subaru13/12-sprint-yp
+          images: ${{ secrets.DOCKER_USERNAME }}/12-sprint-yp
 
       - name: Build and push Docker Inage
         uses: docker/build-push-action@v5
